@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Blog của lớp 8/6</title>
+  <link rel="stylesheet" href="chỉnh font.css">
+  <!-- Gắn font Pacifico đúng cách -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: pink;
+      font-size: 30px; 
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2, h5 {
+      font-family: 'Pacifico', cursive;
+      color: #d63384;
+    }
+
+    img {
+      display: block;
+      margin: 10px auto;
+    }
+
+    a {
+      display: block;
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    /* Thanh điều hướng */
+    nav {
+      background-color: #d63384;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      max-width: 1200px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 5px 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-family: 'Arial', sans-serif;
+      padding: 10px 15px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      display: block;
+    }
+
+    nav ul li a:hover {
+      background-color: #f78fb3;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    nav ul li a:active {
+      transform: translateY(0);
+    }
+
+    /* Thêm hiệu ứng cho menu khi cuộn */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      nav ul li {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    /* Tạo style cho bảng */
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      font-size: 20px;
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f78fb3;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #ffe6f0;
+    }
+
+    tr:hover {
+      background-color: #fddde6;
+      transition: 0.3s ease;
+    }
+
+    /* Tạo style cho danh sách */
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px auto;
+      width: 50%;
+      font-size: 20px;
+    }
+
+    li {
+      padding: 10px;
+      background-color: white;
+      margin: 5px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hiệu ứng hover cho danh sách con trai */
+    #con-trai li:hover {
+      background-color: lightgreen; /* Nền chuyển sang màu xanh */
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Thanh điều hướng -->
+  <nav>
+    <ul>
+      <li><a href="#">Trang chủ</a></li>
+      <li><a href="#thanh-vien">Thành viên</a></li>
+      <li><a href="#contact">Liên hệ</a></li>
+      <li><a href="#about">Giới thiệu</a></li>
+    </ul>
+  </nav>
+
+  <h1><strong>Thành viên lớp 8/6</strong></h1>
+
+  <h2>Cô giáo chủ nhiệm</h2>
+  <img src="CGCN.png" alt="Cô Vũ Hương" height="200" width="200">
+  <a href="https://www.facebook.com/vu.huong.372661?locale=vi_VN" target="_blank">Trang cá nhân</a>
+
+  <h3>Họ và tên:</h3>
+  <h4>Sinh nhật 😍:</h4>
+
+  <h5>danh sách các bạn trong lớp</h5>
+
+  <table>
+    <tr>
+      <th>STT</th>
+      <th>Họ và tên</th>
+      <th>Ngày sinh</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Nguyễn Văn A</td>
+      <td>01/01/2010</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Trần Thị B</td>
+      <td>05/02/2010</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Lê Văn C</td>
+      <td>12/03/2010</td>
+    </tr>
+  </table>
+
+  <!-- Danh sách con trai -->
+  <h5>Danh sách con trai</h5>
+  <ul id="con-trai">
+    <li>Nguyễn Văn A</li>
+    <li>Trần Văn B</li>
+    <li>Lê Quang C</li>
+    <li>Phạm Mạnh D</li>
+    <!-- Thêm các bạn con trai khác -->
+  </ul>
+
+  <!-- Danh sách con gái -->
+  <h5>Danh sách con gái</h5>
+  <ul>
+    <li>Trần Thị X</li>
+    <li>Nguyễn Thị Y</li>
+    <li>Lê Thị Z</li>
+    <li>Phạm Thị A</li>
+    <!-- Thêm các bạn con gái khác -->
+  </ul>
+
+</body>
+
+</html>

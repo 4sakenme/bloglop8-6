@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Blog của lớp 8/6</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    img {
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      max-width: 100%;
+      height: auto;
+    }
+    .error {
+      color: red;
+      padding: 20px;
+      background-color: #ffeeee;
+      border: 1px solid red;
+      border-radius: 5px;
+      margin: 20px auto;
+      max-width: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><strong>CHÀO MỪNG ĐẾN VỚI LỚP 8/6</strong></h1>
+  
+  <!-- Cách 1: Ảnh từ cùng thư mục -->
+  <img src="anhlop86.png" alt="Ảnh lớp 8/6" height="500" width="500">
+  
+  <!-- Cách 2: Thêm fallback nếu ảnh không load được -->
+  <div id="image-container">
+    <img src="anhlop86.png" alt="Ảnh lớp 8/6" onerror="this.onerror=null;this.src='fallback-image.jpg';document.getElementById('error-message').style.display='block'">
+    <div id="error-message" class="error" style="display:none">
+      Không thể tải ảnh lớp. Vui lòng kiểm tra đường dẫn hoặc tên file ảnh.
+    </div>
+  </div>
+  
+  <!-- Cách 3: Sử dụng ảnh từ URL online (nếu có) -->
+  <!-- <img src="https://example.com/anhlop86.png" alt="Ảnh lớp 8/6"> -->
+</body>
+
+</html>
